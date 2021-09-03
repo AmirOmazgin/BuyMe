@@ -59,27 +59,19 @@ public class MainTests {
     public void SendAndReceiveInformationTest() throws InterruptedException {
         SendAndReceiveInformation informationTest = new SendAndReceiveInformation(driver, test);
         test.log(Status.INFO, "Send And Receive Information");
-        Thread.sleep(1000);
         informationTest.enterReceiverName();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        Thread.sleep(1000);
         informationTest.pickEvent();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        Thread.sleep(1000);
         informationTest.enterBlessing();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        Thread.sleep(1000);
         informationTest.uploadPic();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        Thread.sleep(1000);
         informationTest.nextPage();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        Thread.sleep(1000);
         informationTest.chooseSms();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        Thread.sleep(1000);
         informationTest.senderName();
-        Thread.sleep(1000);
         informationTest.assertTesting();
 
     }
